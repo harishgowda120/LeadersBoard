@@ -5,7 +5,7 @@ function AddUser() {
   const [name, setName] = useState('');
 
   const handleAddUser = async () => {
-    await axios.post('http://localhost:5000/api/users/add', { name });
+    await axios.post('https://leadersboard-qkxl.onrender.com/api/users/add', { name });
     setName('');
     alert('User Added!');
   };
