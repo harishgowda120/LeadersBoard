@@ -6,12 +6,12 @@ function ClaimPoints() {
   const [selectedUser, setSelectedUser] = useState('');
 
   useEffect(() => {
-    axios.get('http://localhost:5000/api/users/leaderboard')
+    axios.get('https://leadersboard-qkxl.onrender.com/api/users/leaderboard')
       .then(res => setUsers(res.data));
   }, []);
 
   const handleClaim = async () => {
-    await axios.post(`http://localhost:5000/api/users/claim/${selectedUser}`);
+    await axios.post(`https://leadersboard-qkxl.onrender.com/api/users/claim/${selectedUser}`);
     alert('Points Claimed!');
   };
 
