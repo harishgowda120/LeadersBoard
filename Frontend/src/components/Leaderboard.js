@@ -6,7 +6,7 @@ function Leaderboard() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const res = await axios.get('http://localhost:5000/api/users/leaderboard');
+      const res = await axios.get('https://leadersboard-qkxl.onrender.com/api/users/leaderboard');
       setLeaderboard(res.data);
     };
     fetchData();
